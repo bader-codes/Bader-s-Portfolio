@@ -1,0 +1,89 @@
+/* ──────────────────────────────────────────────────────────
+   IMPORTS
+────────────────────────────────────────────────────────── */
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* ──────────────────────────────────────────────────────────
+   ROOT VARIABLES
+────────────────────────────────────────────────────────── */
+:root {
+  --border: rgba(255, 255, 255, 0.071);
+}
+
+/* ──────────────────────────────────────────────────────────
+   GLOBAL STYLES
+────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  font-size: 16px;
+}
+
+body {
+  background: #080c12;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ──────────────────────────────────────────────────────────
+   BACKGROUND GRID
+────────────────────────────────────────────────────────── */
+.grid-lines {
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+  opacity: 0.4;
+}
+
+/* ──────────────────────────────────────────────────────────
+   CUSTOM SCROLLBAR
+────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080c12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f9cf9;
+  border-radius: 999px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   TAILWIND THEME
+────────────────────────────────────────────────────────── */
+@theme {
+  --animate-wave: wave 2.5s ease-in-out infinite;
+}
+
+/* ──────────────────────────────────────────────────────────
+   ANIMATIONS
+────────────────────────────────────────────────────────── */
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-25deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-20deg);
+  }
+
+  80% {
+    transform: rotate(5deg);
+  }
+}
