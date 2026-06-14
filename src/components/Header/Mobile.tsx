@@ -41,7 +41,7 @@ export default function Sidebar({ isOpen, setIsOpen }: MobileProps) {
         }`}
       >
         <button onClick={() => setIsOpen(false)} className="p-4">
-          <MdClose size={25} className="cursor-pointer" />
+          <MdClose size={25} className="cursor-pointer text-gray-700" />
         </button>
 
         <ul className="p-4">
@@ -57,6 +57,7 @@ export default function Sidebar({ isOpen, setIsOpen }: MobileProps) {
                   scrollToSection(link);
                   setIsOpen(false);
                 }}
+                className="text-slate-500 font-medium text-xl"
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
               </Link>

@@ -79,14 +79,14 @@ export function Header() {
                             after:w-0
                             after:rounded-full
                             after:transition-all
-                            after:duration-300
+                            after:duration-500
                             after:bg-linear-to-r
                             after:from-blue-500
                             after:to-violet-500
-                            hover:text-white
+                            hover:text-white!
                             hover:after:w-full
-
-                            ${activeSection === link ? "text-white after:w-full" : "text-gray-400"}
+                            text-[#8fa3bf]!
+                            ${activeSection === link ? "text-gray-50 after:w-full" : "text-gray-400"}
                           `}
               >
                 {link}

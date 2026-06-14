@@ -46,13 +46,13 @@ export default function Cursor() {
     <>
       <div
         ref={dotRef}
-        className="fixed w-2 h-2 bg-[#4f9cf9] rounded-full pointer-events-none z-999"
+        className="fixed w-2 h-2 hidden lg:block bg-[#4f9cf9] rounded-full pointer-events-none z-999"
         style={{ top: 0, left: 0 }}
       />
 
       <div
         ref={ringRef}
-        className="fixed w-10 h-10 border border-[#4f9cf980] rounded-full pointer-events-none z-999"
+        className="fixed w-10 h-10 hidden lg:block border border-[#4f9cf980] rounded-full pointer-events-none z-999"
         style={{ top: 0, left: 0 }}
       />
     </>
