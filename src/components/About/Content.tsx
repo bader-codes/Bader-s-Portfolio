@@ -18,9 +18,9 @@ const scrollToSection = (id: string) => {
 
 export default function Content() {
   return (
-    <>
+    <div className="overflow-hidden">
       <motion.div
-        className="flex flex-col items-center lg:items-start text-center lg:text-left mx-auto mt-6 lg:mt-0"
+        className="flex flex-col items-center justify-center lg:items-start text-center lg:text-left mx-auto mt-6 lg:mt-0"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -35,18 +35,18 @@ export default function Content() {
           </span>
         </h2>
 
-        <p className="mt-6 mb-8 text-base sm:text-lg text-gray-300 max-w-xl text-mtd">
+        <p className="mt-6 mb-10 md:mb-12 text-base sm:text-lg text-gray-300 text-mtd text-center w-[90%] md:w-[70%] mx-auto">
           I'm a Front-End Developer passionate about creating modern and
           responsive web interfaces. I enjoy learning how things work under the
           hood, improving my problem-solving skills, and building projects that
           help me grow as a developer.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-xl lg:max-w-none">
+        <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto gap-3 sm:gap-4 w-full">
           {highlights.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex items-center gap-2.5 text-sm sm:text-base text-slate-400"
+              className="flex items-center border border-gray-800 rounded-md p-3 gap-2.5 text-sm sm:text-base text-slate-400"
             >
               <Icon className="shrink-0 text-cyan-400" size={18} />
               <span>{text}</span>
@@ -68,6 +68,6 @@ export default function Content() {
           <MdArrowRight size={25} />
         </Link>
       </motion.div>
-    </>
+    </div>
   );
 }
