@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+
 export default function ProImage() {
   return (
     <div className="overflow-hidden w-full h-100">

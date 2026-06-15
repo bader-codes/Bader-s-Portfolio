@@ -85,7 +85,7 @@ export function Header() {
                             after:to-violet-500
                             hover:text-white!
                             hover:after:w-full
-                            text-[#8fa3bf]!
+                            text-mtd!
                             ${activeSection === link ? "text-gray-50 after:w-full" : "text-gray-400"}
                           `}
               >
