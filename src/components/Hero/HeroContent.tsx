@@ -16,7 +16,7 @@ function Stat({ number, label }: SataType) {
         </div>
       </div>
 
-      <span className="text-xs uppercase tracking-widest text-gray-500 mt-1">
+      <span className="text-xs uppercase tracking-widest text-gray-500 mt-1 text-mtd">
         {label}
       </span>
     </div>
@@ -67,7 +67,7 @@ export default function Hero() {
       </div>
 
       {/* Tagline */}
-      <p className="max-w-2xl text-gray-400 leading-8 text-base md:text-lg mb-10">
+      <p className="max-w-2xl text-gray-400 leading-8 text-base md:text-lg mb-10 text-mtd">
         Front-End Developer focused on building responsive, accessible, and
         high-performance web experiences with modern technologies.
       </p>
@@ -76,7 +76,7 @@ export default function Hero() {
       <div className="flex flex-wrap gap-4 mb-12 text-white">
         <a
           href="#resume"
-          className="flex items-center gap-3 px-6 py-3 rounded-xl bg-cyan-500 text-white font-medium hover:scale-105 transition duration-500"
+          className="flex items-center gap-3 px-6 py-3 rounded-xl bg-linear-to-r from-cyan-500 to-purple-500 text-white font-medium hover:scale-105 transition duration-500"
         >
           <MdDownload size={18} className="mt-0.5" />
           Download CV
