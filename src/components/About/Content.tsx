@@ -37,9 +37,9 @@ export default function Content() {
 
         <p className="mt-6 mb-10 md:mb-12 text-base sm:text-lg text-gray-300 text-mtd text-center w-[90%] md:w-[70%] mx-auto">
           I'm a Front-End Developer passionate about creating modern and
-          responsive web interfaces. I enjoy learning how things work under the
-          hood, improving my problem-solving skills, and building projects that
-          help me grow as a developer.
+          responsive web interfaces. I enjoy learning how things work under
+          the hood, improving my problem-solving skills, and building projects
+          that help me grow as a developer.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 mx-auto gap-3 sm:gap-4 w-full">
