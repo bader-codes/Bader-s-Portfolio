@@ -32,7 +32,7 @@ export default function Timeline() {
                 {/* Dot */}
                 <div
                   className={`
-                    absolute z-20 w-12 h-12 rounded-full flex items-center justify-center
+                    absolute z-9 w-8 h-8 md:w-12 md:h-12 rounded-full flex items-center justify-center
                     border-4 right-2 top-2 md:left-1/2 md:right-auto md:-translate-x-1/2
                     ${
                       item.completed
