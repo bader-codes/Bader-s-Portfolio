@@ -5,17 +5,19 @@ export default function Roadmap() {
     <section id="Roadmap" className="py-8">
       <div className="w-full flex justify-center items-center">
         <p
-          className={`inline-flex items-center gap-2 text-base font-medium uppercase tracking-[0.12em]
+          className={`
+                inline-flex items-center gap-2 font-medium uppercase tracking-[0.12em]
+                after:content-[''] after:inline-block after:w-6 after:h-px after:bg-blue-500 text-base
                 text-blue-500 before:content-[''] before:inline-block before:w-6 before:h-px before:bg-blue-500
-                after:content-[''] after:inline-block after:w-6 after:h-px after:bg-blue-500`}
+                `}
         >
-          Who I Am
+          My Journey
         </p>
       </div>
 
       <div className="py-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-12">
         <div className="w-full flex flex-col justify-center items-center">
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight text-center w-full">
+          <h2 className="text-4xl mb-5 sm:text-5xl xl:text-6xl font-bold leading-tight text-center w-full">
             Learning{" "}
             <span className="bg-linear-to-r from-cyan-400 via-sky-400 to-indigo-500 bg-clip-text text-transparent italic">
               Roadmap

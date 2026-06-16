@@ -17,7 +17,7 @@ export default function SkillsHighLight() {
                 <div
                   className={`w-12 h-12 flex items-center justify-center rounded-xl text-white ${skill.color}`}
                 >
-                  <Icon size={24} />
+                  <Icon size={30} />
                 </div>
 
                 <div className="flex-1">
@@ -33,11 +33,11 @@ export default function SkillsHighLight() {
 
                   <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden mb-3">
                     <motion.div
-                      initial={{ width: 0 }}
+                      className="bg-linear-to-r from-cyan-400 to-purple-500 h-full rounded-full"
                       whileInView={{ width: `${skill.percent}%` }}
-                      viewport={{ once: false }}
                       transition={{ duration: 1.2 }}
-                      className="h-full bg-sky-400 rounded-full"
+                      viewport={{ once: false }}
+                      initial={{ width: 0 }}
                     />
                   </div>
 

@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="relative z-9 max-w-7xl mx-auto w-full px-4 md:px-8 pt-20 pb-16 flex flex-col items-start"
+      className="relative max-w-7xl mx-auto w-full px-4 md:px-8 pt-20 pb-16 flex flex-col items-start"
     >
       {/* Greeting */}
       <p className="flex items-center gap-2 text-gray-400 font-medium mb-4">
