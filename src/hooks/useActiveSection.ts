@@ -1,43 +1,42 @@
 import { useEffect, useState } from "react";
 
 export function useActiveSection(sectionIds: string[]) {
-  const [activeSection, setActiveSection] = useState("hero");
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (visible) {
-          setActiveSection(visible.target.id);
-        }
-      },
-      {
-        rootMargin: "0px",
-        threshold: 0.5,
-      },
-    );
-
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, [sectionIds]);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < 100) {
-        setActiveSection("hero");
+      const checkpoint = window.innerHeight * 0.35 + window.scrollY;
+
+      let currentSection = "";
+
+      sectionIds.forEach((id) => {
+        const el = document.getElementById(id);
+
+        if (!el) return;
+
+        const top = el.offsetTop;
+        const bottom = top + el.offsetHeight;
+
+        if (checkpoint >= top && checkpoint <= bottom) {
+          currentSection = id;
+        }
+      });
+
+      if (window.scrollY < 80) {
+        currentSection = "";
       }
+
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [sectionIds]);
 
   return activeSection;
 }
